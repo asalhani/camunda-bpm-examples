@@ -35,6 +35,7 @@ public class CamundaSpringBootExampleApplication {
 	@PostConstruct
 	public void startProcess() {
 	  runtimeService.startProcessInstanceByKey("loanRequest");
+	  
 	}
 
 }

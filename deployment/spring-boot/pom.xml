@@ -19,6 +19,7 @@
 	</parent>
 
 	<properties>
+	    <camunda.spring-boot.version>3.2.0</camunda.spring-boot.version>
         <version.camunda>7.10.0</version.camunda>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -33,6 +34,10 @@
         <type>pom</type>
         <version>${version.camunda}</version>
       </dependency>
+      
+     
+	<!-- https://mvnrepository.com/artifact/com.microsoft/sqljdbc4 -->
+	
     </dependencies>
   </dependencyManagement>
 
@@ -45,10 +50,12 @@
     </dependency>
 
     <!-- camunda -->
-    <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-spring</artifactId>
-    </dependency>
+
+	<dependency>
+	  <groupId>org.camunda.bpm.springboot</groupId>
+	  <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
+	  <version>{project-version}</version>
+	</dependency>
 
     <!-- database -->
     <dependency>
@@ -63,6 +70,12 @@
       <scope>test</scope>
     </dependency>
     
+     <dependency>
+	    <groupId>com.microsoft.sqlserver</groupId>
+	    <artifactId>mssql-jdbc</artifactId>
+	    <version>7.0.0.jre8</version>
+	</dependency>
+	
 	</dependencies>
 	
 	<build>
